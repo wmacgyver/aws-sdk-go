@@ -1,3 +1,5 @@
+// +build codegen
+
 package api
 
 import (
@@ -48,6 +50,7 @@ func (a *API) AttachString(str string) {
 
 // Setup initializes the API.
 func (a *API) Setup() {
+	a.setMetadataEndpointsKey()
 	a.writeShapeNames()
 	a.resolveReferences()
 	a.fixStutterNames()
@@ -55,6 +58,8 @@ func (a *API) Setup() {
 	if !a.NoRenameToplevelShapes {
 		a.renameToplevelShapes()
 	}
+
+	a.renameCollidingFields()
 	a.updateTopLevelShapeReferences()
 	a.createInputOutputShapes()
 	a.customizationPasses()

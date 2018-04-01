@@ -8,6 +8,8 @@
           "SubscriptionName": "mymysqleventsubscription"
         },
         "output": {
+          "EventSubscription": {
+          }
         },
         "comments": {
           "input": {
@@ -50,6 +52,8 @@
           "ResourceIdentifier": "arn:aws:rds:us-east-1:992648334831:db:mymysqlinstance"
         },
         "output": {
+          "ResourcePendingMaintenanceActions": {
+          }
         },
         "comments": {
           "input": {
@@ -69,6 +73,8 @@
           "DBSecurityGroupName": "mydbsecuritygroup"
         },
         "output": {
+          "DBSecurityGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -89,6 +95,8 @@
           "TargetDBClusterParameterGroupIdentifier": "mydbclusterparametergroup-copy"
         },
         "output": {
+          "DBClusterParameterGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -104,10 +112,12 @@
     "CopyDBClusterSnapshot": [
       {
         "input": {
-          "SourceDBClusterSnapshotIdentifier": "mydbclustersnapshot",
-          "TargetDBClusterSnapshotIdentifier": "mydbclustersnapshot-copy"
+          "SourceDBClusterSnapshotIdentifier": "rds:sample-cluster-2016-09-14-10-38",
+          "TargetDBClusterSnapshotIdentifier": "cluster-snapshot-copy-1"
         },
         "output": {
+          "DBClusterSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -115,8 +125,8 @@
           "output": {
           }
         },
-        "description": "This example copies a DB cluster snapshot.",
-        "id": "copy-db-cluster-snapshot-433679d6-4a2e-480f-a057-32c97d729afc",
+        "description": "The following example copies an automated snapshot of a DB cluster to a new DB cluster snapshot.",
+        "id": "to-copy-a-db-cluster-snapshot-1473879770564",
         "title": "To copy a DB cluster snapshot"
       }
     ],
@@ -128,6 +138,8 @@
           "TargetDBParameterGroupIdentifier": "mymysqlparametergroup-copy"
         },
         "output": {
+          "DBParameterGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -147,6 +159,8 @@
           "TargetDBSnapshotIdentifier": "mydbsnapshot-copy"
         },
         "output": {
+          "DBSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -167,6 +181,8 @@
           "TargetOptionGroupIdentifier": "mymysqloptiongroup-copy"
         },
         "output": {
+          "OptionGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -197,6 +213,8 @@
           "StorageEncrypted": true
         },
         "output": {
+          "DBCluster": {
+          }
         },
         "comments": {
           "input": {
@@ -217,6 +235,8 @@
           "Description": "My DB cluster parameter group"
         },
         "output": {
+          "DBClusterParameterGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -236,6 +256,8 @@
           "DBClusterSnapshotIdentifier": "mydbclustersnapshot"
         },
         "output": {
+          "DBClusterSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -259,6 +281,8 @@
           "MasterUsername": "MyUser"
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -289,6 +313,8 @@
           ]
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -309,6 +335,8 @@
           "Description": "My MySQL parameter group"
         },
         "output": {
+          "DBParameterGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -328,6 +356,8 @@
           "DBSecurityGroupName": "mydbsecuritygroup"
         },
         "output": {
+          "DBSecurityGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -347,6 +377,8 @@
           "DBSnapshotIdentifier": "mydbsnapshot"
         },
         "output": {
+          "DBSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -370,6 +402,8 @@
           ]
         },
         "output": {
+          "DBSubnetGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -397,6 +431,8 @@
           "SubscriptionName": "mymysqleventsubscription"
         },
         "output": {
+          "EventSubscription": {
+          }
         },
         "comments": {
           "input": {
@@ -418,6 +454,8 @@
           "OptionGroupName": "mymysqloptiongroup"
         },
         "output": {
+          "OptionGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -437,6 +475,8 @@
           "SkipFinalSnapshot": true
         },
         "output": {
+          "DBCluster": {
+          }
         },
         "comments": {
           "input": {
@@ -471,6 +511,8 @@
           "DBClusterSnapshotIdentifier": "mydbclustersnapshot"
         },
         "output": {
+          "DBClusterSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -490,6 +532,8 @@
           "SkipFinalSnapshot": true
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -502,12 +546,46 @@
         "title": "To delete a DB instance."
       }
     ],
+    "DeleteDBParameterGroup": [
+      {
+        "input": {
+          "DBParameterGroupName": "mydbparamgroup3"
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example deletes a DB parameter group.",
+        "id": "to-delete-a-db-parameter-group-1473888796509",
+        "title": "To delete a DB parameter group"
+      }
+    ],
+    "DeleteDBSecurityGroup": [
+      {
+        "input": {
+          "DBSecurityGroupName": "mysecgroup"
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example deletes a DB security group.",
+        "id": "to-delete-a-db-security-group-1473960141889",
+        "title": "To delete a DB security group"
+      }
+    ],
     "DeleteDBSnapshot": [
       {
         "input": {
           "DBSnapshotIdentifier": "mydbsnapshot"
         },
         "output": {
+          "DBSnapshot": {
+          }
         },
         "comments": {
           "input": {
@@ -542,6 +620,8 @@
           "SubscriptionName": "myeventsubscription"
         },
         "output": {
+          "EventSubscription": {
+          }
         },
         "comments": {
           "input": {
@@ -649,6 +729,8 @@
           "DBClusterSnapshotIdentifier": "mydbclustersnapshot"
         },
         "output": {
+          "DBClusterSnapshotAttributesResult": {
+          }
         },
         "comments": {
           "input": {
@@ -821,6 +903,8 @@
           "DBSnapshotIdentifier": "mydbsnapshot"
         },
         "output": {
+          "DBSnapshotAttributesResult": {
+          }
         },
         "comments": {
           "input": {
@@ -837,7 +921,7 @@
       {
         "input": {
           "DBInstanceIdentifier": "mymysqlinstance",
-          "IncludePublic": true,
+          "IncludePublic": false,
           "IncludeShared": true,
           "SnapshotType": "manual"
         },
@@ -849,7 +933,7 @@
           "output": {
           }
         },
-        "description": "This example lists all manually-created, shared, public snapshots for the specified DB instance.",
+        "description": "This example lists all manually-created, shared snapshots for the specified DB instance.",
         "id": "describe-db-snapshots-2c935989-a1ef-4c85-aea4-1d0f45f17f26",
         "title": "To list DB snapshot attributes"
       }
@@ -878,6 +962,8 @@
           "DBParameterGroupFamily": "aurora5.6"
         },
         "output": {
+          "EngineDefaults": {
+          }
         },
         "comments": {
           "input": {
@@ -896,6 +982,8 @@
           "DBParameterGroupFamily": "mysql5.6"
         },
         "output": {
+          "EngineDefaults": {
+          }
         },
         "comments": {
           "input": {
@@ -1089,6 +1177,71 @@
         "title": "To list information about reserved DB instance offerings"
       }
     ],
+    "DescribeSourceRegions": [
+      {
+        "input": {
+        },
+        "output": {
+          "SourceRegions": [
+            {
+              "Endpoint": "https://rds.ap-northeast-1.amazonaws.com",
+              "RegionName": "ap-northeast-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.ap-northeast-2.amazonaws.com",
+              "RegionName": "ap-northeast-2",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.ap-south-1.amazonaws.com",
+              "RegionName": "ap-south-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.ap-southeast-1.amazonaws.com",
+              "RegionName": "ap-southeast-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.ap-southeast-2.amazonaws.com",
+              "RegionName": "ap-southeast-2",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.eu-central-1.amazonaws.com",
+              "RegionName": "eu-central-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.eu-west-1.amazonaws.com",
+              "RegionName": "eu-west-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.sa-east-1.amazonaws.com",
+              "RegionName": "sa-east-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.us-west-1.amazonaws.com",
+              "RegionName": "us-west-1",
+              "Status": "available"
+            },
+            {
+              "Endpoint": "https://rds.us-west-2.amazonaws.com",
+              "RegionName": "us-west-2",
+              "Status": "available"
+            }
+          ]
+        },
+        "comments": {
+        },
+        "description": "To list the AWS regions where a Read Replica can be created.",
+        "id": "to-describe-source-regions-1473457722410",
+        "title": "To describe source regions"
+      }
+    ],
     "DownloadDBLogFilePortion": [
       {
         "input": {
@@ -1115,6 +1268,8 @@
           "TargetDBInstanceIdentifier": "myaurorareplica"
         },
         "output": {
+          "DBCluster": {
+          }
         },
         "comments": {
           "input": {
@@ -1156,6 +1311,8 @@
           "PreferredMaintenanceWindow": "Tue:05:00-Tue:05:30"
         },
         "output": {
+          "DBCluster": {
+          }
         },
         "comments": {
           "input": {
@@ -1193,6 +1350,34 @@
         "title": "To change DB cluster parameter group settings"
       }
     ],
+    "ModifyDBClusterSnapshotAttribute": [
+      {
+        "input": {
+          "AttributeName": "restore",
+          "DBClusterSnapshotIdentifier": "manual-cluster-snapshot1",
+          "ValuesToAdd": [
+            "123451234512",
+            "123456789012"
+          ],
+          "ValuesToRemove": [
+            "all"
+          ]
+        },
+        "output": {
+          "DBClusterSnapshotAttributesResult": {
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example gives two AWS accounts access to a manual DB cluster snapshot and ensures that the DB cluster snapshot is private by removing the value \"all\".",
+        "id": "to-add-or-remove-access-to-a-manual-db-cluster-snapshot-1473889426431",
+        "title": "To add or remove access to a manual DB cluster snapshot"
+      }
+    ],
     "ModifyDBInstance": [
       {
         "input": {
@@ -1206,6 +1391,8 @@
           "PreferredMaintenanceWindow": "Tue:05:00-Tue:05:30"
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -1253,6 +1440,8 @@
           ]
         },
         "output": {
+          "DBSnapshotAttributesResult": {
+          }
         },
         "comments": {
           "input": {
@@ -1275,6 +1464,8 @@
           ]
         },
         "output": {
+          "DBSubnetGroup": {
+          }
         },
         "comments": {
           "input": {
@@ -1299,6 +1490,8 @@
           "SubscriptionName": "mymysqleventsubscription"
         },
         "output": {
+          "EventSubscription": {
+          }
         },
         "comments": {
           "input": {
@@ -1311,6 +1504,35 @@
         "title": "To change event notification subscription settings"
       }
     ],
+    "ModifyOptionGroup": [
+      {
+        "input": {
+          "ApplyImmediately": true,
+          "OptionGroupName": "myawsuser-og02",
+          "OptionsToInclude": [
+            {
+              "DBSecurityGroupMemberships": [
+                "default"
+              ],
+              "OptionName": "MEMCACHED"
+            }
+          ]
+        },
+        "output": {
+          "OptionGroup": {
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example adds an option to an option group.",
+        "id": "to-modify-an-option-group-1473890247875",
+        "title": "To modify an option group"
+      }
+    ],
     "PromoteReadReplica": [
       {
         "input": {
@@ -1319,6 +1541,8 @@
           "PreferredBackupWindow": "03:30-04:00"
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -1338,6 +1562,8 @@
           "ReservedDBInstancesOfferingId": "fb29428a-646d-4390-850e-5fe89926e727"
         },
         "output": {
+          "ReservedDBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -1357,6 +1583,8 @@
           "ForceFailover": false
         },
         "output": {
+          "DBInstance": {
+          }
         },
         "comments": {
           "input": {
@@ -1376,6 +1604,8 @@
           "SubscriptionName": "myeventsubscription"
         },
         "output": {
+          "EventSubscription": {
+          }
         },
         "comments": {
           "input": {
@@ -1445,6 +1675,257 @@
         "title": "To reset the values of a DB parameter group"
       }
     ],
+    "RestoreDBClusterFromSnapshot": [
+      {
+        "input": {
+          "DBClusterIdentifier": "restored-cluster1",
+          "Engine": "aurora",
+          "SnapshotIdentifier": "sample-cluster-snapshot1"
+        },
+        "output": {
+          "DBCluster": {
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example restores an Amazon Aurora DB cluster from a DB cluster snapshot.",
+        "id": "to-restore-an-amazon-aurora-db-cluster-from-a-db-cluster-snapshot-1473958144325",
+        "title": "To restore an Amazon Aurora DB cluster from a DB cluster snapshot"
+      }
+    ],
+    "RestoreDBClusterToPointInTime": [
+      {
+        "input": {
+          "DBClusterIdentifier": "sample-restored-cluster1",
+          "RestoreToTime": "2016-09-13T18:45:00Z",
+          "SourceDBClusterIdentifier": "sample-cluster1"
+        },
+        "output": {
+          "DBCluster": {
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example restores a DB cluster to a new DB cluster at a point in time from the source DB cluster.",
+        "id": "to-restore-a-db-cluster-to-a-point-in-time-1473962082214",
+        "title": "To restore a DB cluster to a point in time."
+      }
+    ],
+    "RestoreDBInstanceFromDBSnapshot": [
+      {
+        "input": {
+          "DBInstanceIdentifier": "mysqldb-restored",
+          "DBSnapshotIdentifier": "rds:mysqldb-2014-04-22-08-15"
+        },
+        "output": {
+          "DBInstance": {
+            "AllocatedStorage": 200,
+            "AutoMinorVersionUpgrade": true,
+            "AvailabilityZone": "us-west-2b",
+            "BackupRetentionPeriod": 7,
+            "CACertificateIdentifier": "rds-ca-2015",
+            "CopyTagsToSnapshot": false,
+            "DBInstanceArn": "arn:aws:rds:us-west-2:123456789012:db:mysqldb-restored",
+            "DBInstanceClass": "db.t2.small",
+            "DBInstanceIdentifier": "mysqldb-restored",
+            "DBInstanceStatus": "available",
+            "DBName": "sample",
+            "DBParameterGroups": [
+              {
+                "DBParameterGroupName": "default.mysql5.6",
+                "ParameterApplyStatus": "in-sync"
+              }
+            ],
+            "DBSecurityGroups": [
+
+            ],
+            "DBSubnetGroup": {
+              "DBSubnetGroupDescription": "default",
+              "DBSubnetGroupName": "default",
+              "SubnetGroupStatus": "Complete",
+              "Subnets": [
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2a"
+                  },
+                  "SubnetIdentifier": "subnet-77e8db03",
+                  "SubnetStatus": "Active"
+                },
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2b"
+                  },
+                  "SubnetIdentifier": "subnet-c39989a1",
+                  "SubnetStatus": "Active"
+                },
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2c"
+                  },
+                  "SubnetIdentifier": "subnet-4b267b0d",
+                  "SubnetStatus": "Active"
+                }
+              ],
+              "VpcId": "vpc-c1c5b3a3"
+            },
+            "DbInstancePort": 0,
+            "DbiResourceId": "db-VNZUCCBTEDC4WR7THXNJO72HVQ",
+            "DomainMemberships": [
+
+            ],
+            "Engine": "mysql",
+            "EngineVersion": "5.6.27",
+            "LicenseModel": "general-public-license",
+            "MasterUsername": "mymasteruser",
+            "MonitoringInterval": 0,
+            "MultiAZ": false,
+            "OptionGroupMemberships": [
+              {
+                "OptionGroupName": "default:mysql-5-6",
+                "Status": "in-sync"
+              }
+            ],
+            "PendingModifiedValues": {
+            },
+            "PreferredBackupWindow": "12:58-13:28",
+            "PreferredMaintenanceWindow": "tue:10:16-tue:10:46",
+            "PubliclyAccessible": true,
+            "ReadReplicaDBInstanceIdentifiers": [
+
+            ],
+            "StorageEncrypted": false,
+            "StorageType": "gp2",
+            "VpcSecurityGroups": [
+              {
+                "Status": "active",
+                "VpcSecurityGroupId": "sg-e5e5b0d2"
+              }
+            ]
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example restores a DB instance from a DB snapshot.",
+        "id": "to-restore-a-db-instance-from-a-db-snapshot-1473961657311",
+        "title": "To restore a DB instance from a DB snapshot."
+      }
+    ],
+    "RestoreDBInstanceToPointInTime": [
+      {
+        "input": {
+          "RestoreTime": "2016-09-13T18:45:00Z",
+          "SourceDBInstanceIdentifier": "mysql-sample",
+          "TargetDBInstanceIdentifier": "mysql-sample-restored"
+        },
+        "output": {
+          "DBInstance": {
+            "AllocatedStorage": 200,
+            "AutoMinorVersionUpgrade": true,
+            "AvailabilityZone": "us-west-2b",
+            "BackupRetentionPeriod": 7,
+            "CACertificateIdentifier": "rds-ca-2015",
+            "CopyTagsToSnapshot": false,
+            "DBInstanceArn": "arn:aws:rds:us-west-2:123456789012:db:mysql-sample-restored",
+            "DBInstanceClass": "db.t2.small",
+            "DBInstanceIdentifier": "mysql-sample-restored",
+            "DBInstanceStatus": "available",
+            "DBName": "sample",
+            "DBParameterGroups": [
+              {
+                "DBParameterGroupName": "default.mysql5.6",
+                "ParameterApplyStatus": "in-sync"
+              }
+            ],
+            "DBSecurityGroups": [
+
+            ],
+            "DBSubnetGroup": {
+              "DBSubnetGroupDescription": "default",
+              "DBSubnetGroupName": "default",
+              "SubnetGroupStatus": "Complete",
+              "Subnets": [
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2a"
+                  },
+                  "SubnetIdentifier": "subnet-77e8db03",
+                  "SubnetStatus": "Active"
+                },
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2b"
+                  },
+                  "SubnetIdentifier": "subnet-c39989a1",
+                  "SubnetStatus": "Active"
+                },
+                {
+                  "SubnetAvailabilityZone": {
+                    "Name": "us-west-2c"
+                  },
+                  "SubnetIdentifier": "subnet-4b267b0d",
+                  "SubnetStatus": "Active"
+                }
+              ],
+              "VpcId": "vpc-c1c5b3a3"
+            },
+            "DbInstancePort": 0,
+            "DbiResourceId": "db-VNZUCCBTEDC4WR7THXNJO72HVQ",
+            "DomainMemberships": [
+
+            ],
+            "Engine": "mysql",
+            "EngineVersion": "5.6.27",
+            "LicenseModel": "general-public-license",
+            "MasterUsername": "mymasteruser",
+            "MonitoringInterval": 0,
+            "MultiAZ": false,
+            "OptionGroupMemberships": [
+              {
+                "OptionGroupName": "default:mysql-5-6",
+                "Status": "in-sync"
+              }
+            ],
+            "PendingModifiedValues": {
+            },
+            "PreferredBackupWindow": "12:58-13:28",
+            "PreferredMaintenanceWindow": "tue:10:16-tue:10:46",
+            "PubliclyAccessible": true,
+            "ReadReplicaDBInstanceIdentifiers": [
+
+            ],
+            "StorageEncrypted": false,
+            "StorageType": "gp2",
+            "VpcSecurityGroups": [
+              {
+                "Status": "active",
+                "VpcSecurityGroupId": "sg-e5e5b0d2"
+              }
+            ]
+          }
+        },
+        "comments": {
+          "input": {
+          },
+          "output": {
+          }
+        },
+        "description": "The following example restores a DB instance to a new DB instance at a point in time from the source DB instance.",
+        "id": "to-restore-a-db-instance-to-a-point-in-time-1473962652154",
+        "title": "To restore a DB instance to a point in time."
+      }
+    ],
     "RevokeDBSecurityGroupIngress": [
       {
         "input": {
@@ -1452,6 +1933,8 @@
           "DBSecurityGroupName": "mydbsecuritygroup"
         },
         "output": {
+          "DBSecurityGroup": {
+          }
         },
         "comments": {
           "input": {
